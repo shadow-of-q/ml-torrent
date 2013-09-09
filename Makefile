@@ -1,8 +1,8 @@
 all: native byte
 
 native:
-	ocamlbuild -no-hygiene -verbose 1 -use-ocamlfind -pkgs str,batteries torrent.native
+	ocamlbuild -verbose 1 -use-ocamlfind -pkgs batteries torrent.native
 
 byte:
-	ocamlbuild -no-hygiene -verbose 1 -use-ocamlfind -pkgs str,batteries torrent.byte
+	ocamlbuild -cflags -g -verbose 1 -use-ocamlfind -pkgs batteries torrent.byte
 
